@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/uts_fe_iaka/static/css/main.e62ef6b0.css",
+    "main.js": "/uts_fe_iaka/static/js/main.5b412208.js",
+    "index.html": "/uts_fe_iaka/index.html",
+    "main.e62ef6b0.css.map": "/uts_fe_iaka/static/css/main.e62ef6b0.css.map",
+    "main.5b412208.js.map": "/uts_fe_iaka/static/js/main.5b412208.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e62ef6b0.css",
+    "static/js/main.5b412208.js"
+  ]
+}
