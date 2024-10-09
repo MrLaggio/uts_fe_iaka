@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Sistem Manajemen Restoran
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Gambaran Umum
+Proyek ini adalah Sistem Manajemen Restoran yang komprehensif, mencakup API backend yang dibangun dengan Node.js dan Express, serta aplikasi frontend yang dikembangkan dengan React. Sistem ini memungkinkan pengelolaan operasi restoran yang efisien, termasuk penanganan pesanan, pengelolaan menu, dan pelacakan informasi pelanggan.
 
-## Available Scripts
+## Backend (tugas-sequalize)
 
-In the project directory, you can run:
+### Teknologi yang Digunakan
+- Node.js
+- Express.js
+- Sequelize ORM
+- Database MySQL
 
-### `npm start`
+### Fitur Utama
+1. **Endpoint API**: Menyediakan endpoint API RESTful untuk berbagai operasi.
+2. **Model Database**: Mencakup model untuk Pembeli, Pembayaran, Menu, Pemesanan, dan Karyawan.
+3. **Operasi CRUD**: Mendukung operasi Create, Read, Update, dan Delete untuk semua model.
+4. **Seeding Data**: Menyertakan skrip seeder untuk mengisi database dengan data awal.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Struktur Proyek
+- `controllers/`: Berisi logika controller untuk setiap model.
+- `models/`: Mendefinisikan model Sequelize.
+- `routes/`: Mendefinisikan rute API.
+- `seeders/`: Berisi skrip seeding database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Frontend (front-end_restaurant)
 
-### `npm test`
+### Teknologi yang Digunakan
+- React.js
+- Axios untuk panggilan API
+- Tailwind CSS untuk styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Fitur Utama
+1. **Manajemen Pesanan**: Memungkinkan melihat, membuat, memperbarui, dan menghapus pesanan.
+2. **Desain Responsif**: Menggunakan Tailwind CSS untuk UI yang responsif dan modern.
+3. **Manajemen State**: Menggunakan React hooks untuk manajemen state.
 
-### `npm run build`
+### Struktur Proyek
+- `src/components/`: Berisi komponen React.
+- `src/App.js`: Komponen utama aplikasi.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pengaturan dan Instalasi
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pengaturan Backend
+1. Navigasi ke direktori `tugas-sequalize`.
+2. Jalankan `npm install` untuk menginstal dependensi.
+3. Konfigurasikan pengaturan database Anda di file konfigurasi Sequelize.
+4. Jalankan migrasi database dan seeder.
+5. Mulai server dengan `npm start`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pengaturan Frontend
+1. Navigasi ke direktori `front-end_restaurant`.
+2. Jalankan `npm install` untuk menginstal dependensi.
+3. Mulai server pengembangan React dengan `npm start`.
 
-### `npm run eject`
+## Endpoint API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GET `/pembeli/find`: Mendapatkan semua pelanggan
+- POST `/createPembeli`: Membuat pelanggan baru
+- GET `/menu`: Mendapatkan semua item menu
+- POST `/createMenu`: Menambahkan item menu baru
+- GET `/pemesanan`: Mendapatkan semua pesanan
+- POST `/createPemesanan`: Membuat pesanan baru
+- (Endpoint tambahan untuk operasi update dan delete)
